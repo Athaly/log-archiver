@@ -1,6 +1,6 @@
 # log-archiver
 
-Simple Bash CLI tool to compress and archive log files on Unix-based systems.
+Simple Bash CLI tool to compress and archive log files on Unix-based systems: https://roadmap.sh/projects/log-archive-tool
 
 ## Usage
 
