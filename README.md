@@ -1,26 +1,39 @@
 # log-archiver
 
-Simple Bash CLI tool to compress and archive log files on Unix-based systems: https://roadmap.sh/projects/log-archive-tool
+Herramienta de línea de comandos en Bash para comprimir y archivar archivos de log en sistemas basados en Unix.  
+Proyecto original: https://roadmap.sh/projects/log-archive-tool
 
-## Usage
+## Descripción
+
+Este script permite comprimir archivos de log desde un directorio especificado y guardarlos en un archivo `.tar.gz` con marca de tiempo. Los archivos comprimidos se almacenan en una carpeta `archived_logs/`, y cada ejecución queda registrada en `archive.log`.
+
+## Uso
+
+```bash
+./log-archive.sh /ruta/al/directorio
+```
+
+Ejemplo:
 
 ```bash
 ./log-archive.sh /var/log
 ```
 
-The script will:
+## Qué hace el script
 
-- Compress the log files into a timestamped .tar.gz archive
-- Store the archive in `archived_logs/`
-- Log the operation in `archive.log`
+- Comprime los archivos de log en un archivo `.tar.gz` con marca de tiempo.
+- Crea el archivo comprimido en el directorio `archived_logs/`.
+- Registra la operación en el archivo `archive.log`.
 
-## Example
+## Resultado esperado
+
+Al ejecutar:
 
 ```bash
 ./log-archive.sh /var/log
 ```
 
-Creates:
+Se generan:
 
-- `archived_logs/logs_archive_20250722_205150.tar.gz`
-- Logs to `archive.log`
+- `archived_logs/logs_archive_YYYYMMDD_HHMMSS.tar.gz`
+- Entrada de registro en `archive.log`
